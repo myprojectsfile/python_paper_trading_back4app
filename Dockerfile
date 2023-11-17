@@ -14,5 +14,7 @@ COPY . /app
 # Install the application dependencies
 RUN pip install -r requirements.txt
 
+EXPOSE 8080
+
 # Define the entry point for the container
 CMD ["python", "main.py"]
