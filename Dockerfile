@@ -1,14 +1,14 @@
 # Use the official Python image as the base image
-FROM python:3.8
-
-# Set the working directory in the container
-WORKDIR /app
+FROM python:3.11
 
 # Copy the application files into the working directory
-COPY . /app
+ADD requirements.txt .
+ADD main.py .
+ADD aiogram_bot.py .
+ADD tradingview.py .
 
 # Install the application dependencies
 RUN pip install -r requirements.txt
 
 # Define the entry point for the container
-CMD ["python", "manage.py"]
+CMD ["python", "./main.py"]
