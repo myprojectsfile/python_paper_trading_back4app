@@ -67,7 +67,10 @@ async def main():
 
     # Start the scheduler
     scheduler.start()
-
+    print('Telegram Bot Strarted Successfully')
+    print('\n')
+    print('Scheduler Strarted Successfully')
+    
     try:
         while True:
             await asyncio.sleep(1)
